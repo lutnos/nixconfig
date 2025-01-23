@@ -4,6 +4,13 @@
   #
   # Search for packages here: https://search.nixos.org/packages
   home.packages = with pkgs; [
+    # Dave
+    colima
+    docker
+    gh
+    yq
+    p7zip
+
     # Unix tools
     ripgrep # Better `grep`
     fd
