@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 {
   programs = {
     # on macOS, you probably don't need this
@@ -20,7 +20,7 @@
     };
 
     # Type `z <pat>` to cd to some directory
-    zoxide.enable = true;
+    zoxide.enable = lib.mkForce false;
 
     # Better shell prmot!
     starship = {
