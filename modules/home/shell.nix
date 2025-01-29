@@ -24,7 +24,8 @@
 
     # Better shell prmot!
     starship = {
-      enable = true;
+      enable =  true;
+      enableZshIntegration = false;
       settings = {
         username = {
           style_user = "blue bold";
