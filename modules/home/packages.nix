@@ -42,7 +42,7 @@
   #  btop.enable = true;
     # Tmate terminal sharing.
     tmate = {
-      enable = true;
+#      enable = true;
       #host = ""; #In case you wish to use a server other than tmate.io 
     };
   };
