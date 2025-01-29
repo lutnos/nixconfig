@@ -12,10 +12,10 @@
     p7zip
 
     # Unix tools
-    ripgrep # Better `grep`
-    fd
-    sd
-    tree
+#    ripgrep # Better `grep`
+#    fd
+#    sd
+#    tree
     gnumake
 
     # Nix dev
@@ -27,7 +27,7 @@
 
     # On ubuntu, we need this less for `man home-configuration.nix`'s pager to
     # work.
-    less
+#    less
   ];
 
   # Programs natively supported by home-manager.
