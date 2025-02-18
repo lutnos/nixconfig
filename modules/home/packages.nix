@@ -9,7 +9,8 @@
     docker
     gh
     yq
-    p7zip
+#   p7zip
+    _7zz
 
     # Unix tools
 #    ripgrep # Better `grep`
