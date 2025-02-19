@@ -11,6 +11,7 @@
     yq
 #   p7zip
     _7zz
+    atuin
 
     # Unix tools
 #    ripgrep # Better `grep`
