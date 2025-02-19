@@ -1,8 +1,8 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, ... }:
 {
   # https://nixos.asia/en/direnv
   programs.direnv = {
-    enable = lib.mkForce false;
+    enable = true;
     nix-direnv = {
       enable = true;
     };
