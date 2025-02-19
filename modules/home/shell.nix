@@ -17,6 +17,13 @@
       envExtra = ''
         # Custom zshrc goes here
       '';
+      initExtra = ''
+        # Custom zsh profile goes here
+        function set_win_title(){
+            echo -ne "\033]0; $(basename "$PWD") \007"
+        }
+        precmd_functions+=(set_win_title)
+        '';
     };
 
     # Type `z <pat>` to cd to some directory
