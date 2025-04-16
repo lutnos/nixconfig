@@ -13,6 +13,8 @@
     _7zz
     atuin
     exiftool
+    gnupg
+    pinentry_mac
 
     # Unix tools
 #    ripgrep # Better `grep`
