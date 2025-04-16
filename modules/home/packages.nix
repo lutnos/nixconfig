@@ -12,6 +12,7 @@
 #   p7zip
     _7zz
     atuin
+    exiftool
 
     # Unix tools
 #    ripgrep # Better `grep`
