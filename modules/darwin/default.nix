@@ -1,17 +1,12 @@
 # This is your nix-darwin configuration.
 # For home configuration, see /modules/home/*
-{ flake, pkgs, lib, ... }:
-
-let
-  inherit (flake) inputs;
-  inherit (inputs) self;
-in
 {
-  # Use TouchID for `sudo` authentication
-  security.pam.enableSudoTouchIdAuth = true;
+  imports = [
+    ./common
+  ];
 
-  # These users can add Nix caches.
-  nix.settings.trusted-users = [ "root" "dave" ];
+  # Use TouchID for `sudo` authentication
+  security.pam.services.sudo_local.touchIdAuth = true;
 
   # Configure macOS system
   # More M-D19GT7GVPJs => https://github.com/ryan4yin/nix-darwin-kickstarter/blob/main/rich-demo/modules/system.nix

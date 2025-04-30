@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ ... }:
 {
   programs = {
     # on macOS, you probably don't need this
@@ -15,19 +15,21 @@
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
       envExtra = ''
-        # Custom zshrc goes here
+        # Custom ~/.zshenv goes here
       '';
-      initExtra = ''
-        # Custom zsh profile goes here
-        function set_win_title(){
-            echo -ne "\033]0; $(basename "$PWD") \007"
-        }
-        precmd_functions+=(set_win_title)
-        '';
+      profileExtra = ''
+        # Custom ~/.zprofile goes here
+      '';
+      loginExtra = ''
+        # Custom ~/.zlogin goes here
+      '';
+      logoutExtra = ''
+        # Custom ~/.zlogout goes here
+      '';
     };
 
     # Type `z <pat>` to cd to some directory
-    zoxide.enable = lib.mkForce false;
+    zoxide.enable = true;
 
     # Better shell prmot!
     starship = {
@@ -48,11 +50,6 @@
           disabled = false;
         };
       };
-    };
-    atuin = {
-      enable = true;
-      enableBashIntegration = true;
-      enableZshIntegration = true;
     };
   };
 }
