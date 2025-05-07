@@ -1,9 +1,5 @@
 { config, ... }:
 {
-#  home.shellAliases = {
-#    g = "git";
-#    lg = "lazygit";
-#  };
 
   # https://nixos.asia/en/git
   programs = {
@@ -12,9 +8,6 @@
       userName = config.me.fullname;
       userEmail = config.me.email;
       ignores = [ "*~" "*.swp" ];
-#      aliases = {
-#        ci = "commit";
-#      };
       extraConfig = {
         # init.defaultBranch = "master";
         # pull.rebase = "false";
@@ -24,7 +17,6 @@
         core.editor = "vim";
       };
     };
-#    lazygit.enable = true;
   };
 
 }
