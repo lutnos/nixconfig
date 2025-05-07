@@ -8,6 +8,9 @@
   # Use TouchID for `sudo` authentication
   security.pam.services.sudo_local.touchIdAuth = true;
 
+  # These users can add Nix caches.
+  nix.settings.trusted-users = [ "root" "dave" ];
+
   # Configure macOS system
   # More M-D19GT7GVPJs => https://github.com/ryan4yin/nix-darwin-kickstarter/blob/main/rich-demo/modules/system.nix
   system = {

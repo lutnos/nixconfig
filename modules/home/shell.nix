@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 {
   programs = {
     # on macOS, you probably don't need this
@@ -26,10 +26,17 @@
       logoutExtra = ''
         # Custom ~/.zlogout goes here
       '';
+      initContent = ''
+        # Custom zsh profile goes here
+        function set_win_title(){
+            echo -ne "\033]0; $(basename "$PWD") \007"
+        }
+        precmd_functions+=(set_win_title)
+        '';
     };
 
     # Type `z <pat>` to cd to some directory
-    zoxide.enable = true;
+    zoxide.enable = lib.mkForce false;
 
     # Better shell prmot!
     starship = {
@@ -50,6 +57,11 @@
           disabled = false;
         };
       };
+    };
+    atuin = {
+      enable = true;
+      enableBashIntegration = true;
+      enableZshIntegration = true;
     };
   };
 }
