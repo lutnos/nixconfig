@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 {
 #  home.shellAliases = {
 #    g = "git";
@@ -9,8 +9,8 @@
   programs = {
     git = {
       enable = true;
-      userName = "Dave English";
-      userEmail = "4254983+lutnos@users.noreply.github.com";
+      userName = config.me.fullname;
+      userEmail = config.me.email;
       ignores = [ "*~" "*.swp" ];
 #      aliases = {
 #        ci = "commit";
