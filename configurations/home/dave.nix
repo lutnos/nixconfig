@@ -22,5 +22,6 @@ in
     export SDKMAN_DIR="/Users/dave/.sdkman"
     [[ -s "/Users/dave/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/dave/.sdkman/bin/sdkman-init.sh"
     export WORKSPACE="/Users/dave/workspace"
+    export PATH="/Users/dave/bin:$PATH"
     '';
 }
