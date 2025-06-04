@@ -11,6 +11,14 @@
   # These users can add Nix caches.
   nix.settings.trusted-users = [ "root" "dave" ];
 
+  # "To continue using these options, set `system.primaryUser` to the name
+  #  of the user you have been using to run `darwin-rebuild`. In the long
+  #  run, this setting will be deprecated and removed after all the
+  #  functionality it is relevant for has been adjusted to allow
+  #  specifying the relevant user separately, moved under the
+  #  users.users.*` namespace, or migrated to Home Manager."
+  system.primaryUser = "dave";
+
   # Configure macOS system
   # More M-D19GT7GVPJs => https://github.com/ryan4yin/nix-darwin-kickstarter/blob/main/rich-demo/modules/system.nix
   system = {
