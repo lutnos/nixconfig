@@ -19,9 +19,9 @@ in
   home.stateVersion = "24.11";
 
   programs.zsh.initContent = ''
-    export SDKMAN_DIR="/Users/dave/.sdkman"
-    [[ -s "/Users/dave/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/dave/.sdkman/bin/sdkman-init.sh"
+    export SDKMAN_DIR="$HOME/.sdkman"
+    [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
     export WORKSPACE="/Users/dave/workspace"
-    export PATH="/Users/dave/bin:$PATH"
+    export PATH="$HOME/bin:$HOME/.cargo/bin:$PATH"
     '';
 }
