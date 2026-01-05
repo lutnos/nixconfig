@@ -12,7 +12,7 @@
         # init.defaultBranch = "master";
         # pull.rebase = "false";
         gpg.format = "openpgp";
-        user.signingkey = "1AC25855C989D217";
+        user.signingkey = "08154D1C4BF1F9C7";
         commit.gpgsign = true;
         core.editor = "vim";
       };
