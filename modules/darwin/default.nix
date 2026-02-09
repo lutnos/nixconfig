@@ -1,8 +1,13 @@
 # This is your nix-darwin configuration.
 # For home configuration, see /modules/home/*
+{ lib, ... }:
 {
   imports = [
     ./common
+  ];
+
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "vscode"
   ];
 
   # Use TouchID for `sudo` authentication
