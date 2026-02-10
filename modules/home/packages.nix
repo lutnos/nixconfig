@@ -14,7 +14,6 @@
     exiftool
     gnupg
     pinentry_mac
-    nodejs
 
     # Unix tools
     gnumake
