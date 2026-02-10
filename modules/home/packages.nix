@@ -15,6 +15,7 @@
     gnupg
     pinentry_mac
     nodejs
+    python3
 
     # Unix tools
     gnumake
