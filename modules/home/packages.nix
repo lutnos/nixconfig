@@ -14,6 +14,7 @@
     exiftool
     gnupg
     pinentry_mac
+    insomnia
 
     # Unix tools
     gnumake
