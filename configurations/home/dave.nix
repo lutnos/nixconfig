@@ -23,5 +23,6 @@ in
     [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
     export WORKSPACE="/Users/dave/workspace"
     export PATH="$HOME/bin:$HOME/.cargo/bin:$PATH"
+    export JAVA_HOME=`/usr/libexec/java_home -v 21`
     '';
 }
